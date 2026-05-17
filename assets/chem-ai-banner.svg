@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">TaoMu / GTC2080 chemistry and AI systems banner</title>
+  <desc id="desc">Animated sci-fi banner with molecular rings, orbital paths, scan lines, and chemistry inspired AI systems text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="42%" stop-color="#071427"/>
+      <stop offset="100%" stop-color="#06151f"/>
+    </linearGradient>
+    <linearGradient id="cyanGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="48%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a3e635"/>
+    </linearGradient>
+    <linearGradient id="violetCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="55%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ccfbf1" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#22d3ee" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.38"/>
+    </pattern>
+    <style>
+      .grid { animation: gridMove 8s linear infinite; }
+      .scan { animation: scanMove 4.8s ease-in-out infinite; }
+      .orbit { stroke-dasharray: 18 14; animation: dash 9s linear infinite; }
+      .orbit.fast { animation-duration: 5.6s; }
+      .pulse { animation: pulse 2.6s ease-in-out infinite; transform-origin: center; }
+      .floatA { animation: floatA 5.5s ease-in-out infinite; }
+      .floatB { animation: floatB 7s ease-in-out infinite; }
+      .label { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 3px; }
+      .titleText { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; letter-spacing: 2px; }
+      @keyframes gridMove {
+        from { transform: translate3d(0, 0, 0); }
+        to { transform: translate3d(48px, 48px, 0); }
+      }
+      @keyframes scanMove {
+        0%, 100% { transform: translateX(-420px); opacity: 0; }
+        15% { opacity: 0.75; }
+        55% { opacity: 0.35; }
+        85% { opacity: 0; transform: translateX(980px); }
+      }
+      @keyframes dash {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -260; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.55; transform: scale(0.94); }
+        50% { opacity: 1; transform: scale(1.08); }
+      }
+      @keyframes floatA {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+      }
+      @keyframes floatB {
+        0%, 100% { transform: translateY(0) translateX(0); }
+        50% { transform: translateY(10px) translateX(-8px); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .grid, .scan, .orbit, .pulse, .floatA, .floatB { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <rect class="grid" x="-80" y="-80" width="1360" height="520" fill="url(#grid)" opacity="0.9"/>
+  <path d="M0 272 C168 238 260 310 408 272 S690 206 840 252 1048 330 1200 276" fill="none" stroke="#0ea5e9" stroke-width="2" opacity="0.28"/>
+  <path d="M0 92 C190 118 290 52 456 92 S734 162 878 106 1050 40 1200 78" fill="none" stroke="#22c55e" stroke-width="2" opacity="0.22"/>
+  <rect class="scan" x="-120" y="0" width="180" height="360" fill="#67e8f9" opacity="0.16"/>
+  <rect class="scan" x="-155" y="0" width="3" height="360" fill="#a7f3d0" opacity="0.8"/>
+
+  <g transform="translate(210 180)" filter="url(#softGlow)">
+    <circle r="138" fill="url(#coreGlow)" opacity="0.35"/>
+    <ellipse class="orbit" rx="152" ry="50" fill="none" stroke="url(#cyanGreen)" stroke-width="2.5" opacity="0.78"/>
+    <ellipse class="orbit fast" rx="152" ry="50" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.58" transform="rotate(60)"/>
+    <ellipse class="orbit" rx="152" ry="50" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.62" transform="rotate(-60)"/>
+    <g class="pulse">
+      <circle r="18" fill="#ccfbf1"/>
+      <circle r="7" fill="#0f172a"/>
+    </g>
+    <g stroke="#a7f3d0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.86">
+      <path d="M-46 -80 L46 -80 L92 0 L46 80 L-46 80 L-92 0 Z"/>
+      <path d="M-46 -80 L-18 -32"/>
+      <path d="M46 -80 L18 -32"/>
+      <path d="M46 80 L18 32"/>
+      <path d="M-46 80 L-18 32"/>
+    </g>
+    <g fill="#67e8f9">
+      <circle class="floatA" cx="-92" cy="0" r="8"/>
+      <circle class="floatB" cx="92" cy="0" r="8"/>
+      <circle class="floatA" cx="46" cy="-80" r="7"/>
+      <circle class="floatB" cx="-46" cy="80" r="7"/>
+    </g>
+  </g>
+
+  <g transform="translate(420 78)">
+    <text class="label" x="0" y="0" font-size="16" fill="#67e8f9">CHEMISTRY MAJOR BUILDING AI-NATIVE TOOLS</text>
+    <text class="titleText" x="0" y="74" font-size="58" font-weight="800" fill="url(#violetCyan)">TaoMu / GTC2080</text>
+    <text class="titleText" x="0" y="124" font-size="28" font-weight="650" fill="#e2e8f0">Chemistry x AI Agents x Native Systems</text>
+    <text class="label" x="0" y="174" font-size="16" fill="#94a3b8">molecular knowledge engines // C++ kernels // Rust bridges</text>
+  </g>
+
+  <g transform="translate(430 292)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+    <rect x="0" y="-31" width="610" height="52" rx="14" fill="#020617" stroke="#164e63" opacity="0.78"/>
+    <text x="24" y="2" fill="#a7f3d0">C6H6</text>
+    <text x="86" y="2" fill="#64748b">+</text>
+    <text x="118" y="2" fill="#93c5fd">LLM</text>
+    <text x="174" y="2" fill="#64748b">+</text>
+    <text x="206" y="2" fill="#c4b5fd">Kernel</text>
+    <text x="286" y="2" fill="#64748b">-&gt;</text>
+    <text x="334" y="2" fill="#f8fafc">Research-Grade Tooling</text>
+  </g>
+
+  <g opacity="0.65">
+    <circle class="pulse" cx="1110" cy="88" r="4" fill="#a7f3d0"/>
+    <circle class="pulse" cx="1064" cy="136" r="3" fill="#67e8f9"/>
+    <circle class="pulse" cx="1138" cy="206" r="5" fill="#c4b5fd"/>
+    <path d="M1030 260 L1110 88 L1138 206 L1064 136 L1030 260" fill="none" stroke="#334155" stroke-width="2"/>
+  </g>
+</svg>
